@@ -6,13 +6,18 @@ dependencies: three files do the work and a browser can open them directly.
 ## What is here
 
 ```
-index.html            the whole page — all content lives in this file
-assets/css/style.css  layout, typography, light and dark themes, print styles
-assets/js/main.js     nav highlighting, theme toggle, footer year
-assets/favicon.svg    monogram used as the browser tab icon
-.nojekyll             tells GitHub Pages to serve the files as-is
-robots.txt            allows search engines to index the site
+index.html    the entire site — markup, styles, script and icon in one file
+.nojekyll     tells GitHub Pages to serve the files as-is
+robots.txt    allows search engines to index the site
+sitemap.xml   points search engines at the page
 ```
+
+`index.html` is deliberately self-contained. The stylesheet sits in a `<style>`
+block in the head, the script in a `<script>` block at the foot, and the tab
+icon is an embedded SVG. Nothing is fetched from this repository except the
+page itself, so there is no folder to misplace and no broken-link failure mode
+where the page loads but arrives unstyled. The only external request is to
+Google Fonts.
 
 ## Viewing it locally
 
@@ -27,7 +32,8 @@ Then open <http://localhost:8000>.
 
 ## Editing the content
 
-All text sits in `index.html`, in plain sections you can read top to bottom:
+All text sits in `index.html`, below the `</style>` tag, in plain sections you
+can read top to bottom:
 `about`, `research`, `education`, `publications`, `experience`, `projects`,
 `skills`, `awards`, `contact`. To add a job or a degree, copy an existing
 `<article class="entry">` block and change the date and the text inside it.
@@ -56,5 +62,5 @@ pages. Print to PDF from the browser to get a shareable copy.
 ## Deployment
 
 The site is published with GitHub Pages from the `main` branch and is live at
-<https://mshoaibb9010.github.io>. Pushing to `main` republishes it; the change
+<https://mshoaibb9010.github.io/mshoaibb9010/>. Pushing to `main` republishes it; the change
 is usually live within a minute or two.

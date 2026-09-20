@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mshoaibb9010.github.io/sitemap.xml
+Sitemap: https://mshoaibb9010.github.io/mshoaibb9010/sitemap.xml
